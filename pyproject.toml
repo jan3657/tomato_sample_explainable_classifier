@@ -1,0 +1,54 @@
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "tomato-sample-classificator"
+version = "0.1.0"
+description = "Reproducible tomato treatment classification pipeline with SHAP explainability"
+readme = "README.md"
+requires-python = ">=3.11"
+license = {text = "MIT"}
+authors = [
+  {name = "Jan Drole", email = "jan.drole@ijs.si"},
+  {name = "Anja Vehar"}
+]
+keywords = ["machine-learning", "scientific-software", "shap", "tomato", "classification"]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: OS Independent",
+  "Intended Audience :: Science/Research",
+  "Topic :: Scientific/Engineering :: Artificial Intelligence"
+]
+dependencies = [
+  "numpy==2.3.5",
+  "pandas==3.0.0",
+  "scipy==1.17.0",
+  "scikit-learn==1.8.0",
+  "matplotlib==3.10.8",
+  "seaborn==0.13.2",
+  "shap==0.50.0",
+  "PyYAML==6.0.3",
+  "openpyxl==3.1.5",
+  "joblib==1.5.3"
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest==8.4.2",
+  "nbformat==5.10.4",
+  "ipython==9.7.0"
+]
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["tomato_classifier*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+addopts = "-q"

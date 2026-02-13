@@ -1,0 +1,63 @@
+data:
+  # Datasets are not published with this repository.
+  # Use one of the project local paths below (or your own equivalent local path).
+  path: "../TomatoPredictor/Vsi_podatki_brez_null.xlsx" # alt local path: "data/tomato_elements_isotopes.csv"
+  sample_col: "Sample"
+  target_col: "Target"
+
+cv:
+  n_splits: 5
+  shuffle: true
+  random_state: 42
+
+feature_selection:
+  n_attributes: 30
+  linkage_method: "ward"
+  cluster_criterion: "maxclust"
+
+model:
+  lr_max_iter: 1000
+  baseline_strategy: "most_frequent"
+
+shap:
+  decision_plot_max_samples: null
+  generate_force_tp: true
+  generate_force_tp_fn_rounded: true
+  fail_on_rounded_force_error: false
+
+visualization:
+  correlation:
+    figsize_w: 25
+    figsize_h: 5
+    dpi: 300
+  dendrogram:
+    figsize_w: 25
+    figsize_h: 5
+    dpi: 300
+  decision_plot:
+    dpi: 120
+  force_plot:
+    dpi: 120
+    rounded_figsize_w: 20
+    rounded_figsize_h: 3
+  tree:
+    figsize_w: 15
+    figsize_h: 15
+    dpi: 150
+  confusion_matrix:
+    figsize_w: 10
+    figsize_h: 8
+    dpi: 200
+  roc_curve:
+    figsize_w: 10
+    figsize_h: 8
+    dpi: 200
+
+output:
+  root_dir: "results/reproducible_run"
+  metrics_dir: "metrics"
+  figures_dir: "figures"
+  logs_dir: "logs"
+
+reproducibility:
+  global_seed: 42

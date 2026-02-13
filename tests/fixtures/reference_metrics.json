@@ -1,0 +1,801 @@
+{
+  "data": {
+    "path": "../TomatoPredictor/Vsi_podatki_brez_null.xlsx",
+    "shape": [
+      41,
+      72
+    ],
+    "n_features_raw": 70,
+    "class_counts": {
+      "HPW": 9,
+      "HSPW": 13,
+      "LPW": 6,
+      "LSWW": 7,
+      "LWW": 6
+    },
+    "classes_sorted": [
+      "HPW",
+      "HSPW",
+      "LPW",
+      "LSWW",
+      "LWW"
+    ]
+  },
+  "params": {
+    "num_selected_features": 30,
+    "num_splits": 5,
+    "splitter": "StratifiedKFold(n_splits=5, shuffle=True, random_state=42)",
+    "rf": "RandomForestClassifier(random_state=fold_index, all other params default)",
+    "dt": "DecisionTreeClassifier(random_state=fold_index, all other params default)",
+    "lr": "Pipeline(StandardScaler + LogisticRegression(max_iter=1000, random_state=fold_index))",
+    "dummy": "DummyClassifier(strategy=\"most_frequent\")"
+  },
+  "fold_summaries": [
+    {
+      "fold": 0,
+      "train_size": 32,
+      "test_size": 9,
+      "train_class_counts": {
+        "HPW": 7,
+        "HSPW": 11,
+        "LPW": 4,
+        "LSWW": 5,
+        "LWW": 5
+      },
+      "test_class_counts": {
+        "HPW": 2,
+        "HSPW": 2,
+        "LPW": 2,
+        "LSWW": 2,
+        "LWW": 1
+      },
+      "n_features_before": 70,
+      "n_features_after": 30,
+      "corr_min": 0.00014562569546925795,
+      "corr_max": 1.0,
+      "cut_distance": 0.48326946825539085,
+      "n_clusters_actual": 30
+    },
+    {
+      "fold": 1,
+      "train_size": 33,
+      "test_size": 8,
+      "train_class_counts": {
+        "HPW": 7,
+        "HSPW": 10,
+        "LPW": 5,
+        "LSWW": 6,
+        "LWW": 5
+      },
+      "test_class_counts": {
+        "HPW": 2,
+        "HSPW": 3,
+        "LPW": 1,
+        "LSWW": 1,
+        "LWW": 1
+      },
+      "n_features_before": 70,
+      "n_features_after": 30,
+      "corr_min": 1.1711033710868685e-05,
+      "corr_max": 1.0,
+      "cut_distance": 0.4359938802624135,
+      "n_clusters_actual": 30
+    },
+    {
+      "fold": 2,
+      "train_size": 33,
+      "test_size": 8,
+      "train_class_counts": {
+        "HPW": 7,
+        "HSPW": 10,
+        "LPW": 5,
+        "LSWW": 6,
+        "LWW": 5
+      },
+      "test_class_counts": {
+        "HPW": 2,
+        "HSPW": 3,
+        "LPW": 1,
+        "LSWW": 1,
+        "LWW": 1
+      },
+      "n_features_before": 70,
+      "n_features_after": 30,
+      "corr_min": 0.00010137742540836143,
+      "corr_max": 1.0,
+      "cut_distance": 0.47877865087153265,
+      "n_clusters_actual": 30
+    },
+    {
+      "fold": 3,
+      "train_size": 33,
+      "test_size": 8,
+      "train_class_counts": {
+        "HPW": 7,
+        "HSPW": 10,
+        "LPW": 5,
+        "LSWW": 6,
+        "LWW": 5
+      },
+      "test_class_counts": {
+        "HPW": 2,
+        "HSPW": 3,
+        "LPW": 1,
+        "LSWW": 1,
+        "LWW": 1
+      },
+      "n_features_before": 70,
+      "n_features_after": 30,
+      "corr_min": 5.110669487392748e-06,
+      "corr_max": 1.0,
+      "cut_distance": 0.44872647460754134,
+      "n_clusters_actual": 30
+    },
+    {
+      "fold": 4,
+      "train_size": 33,
+      "test_size": 8,
+      "train_class_counts": {
+        "HPW": 8,
+        "HSPW": 11,
+        "LPW": 5,
+        "LSWW": 5,
+        "LWW": 4
+      },
+      "test_class_counts": {
+        "HPW": 1,
+        "HSPW": 2,
+        "LPW": 1,
+        "LSWW": 2,
+        "LWW": 2
+      },
+      "n_features_before": 70,
+      "n_features_after": 30,
+      "corr_min": 7.609137898089155e-05,
+      "corr_max": 1.0,
+      "cut_distance": 0.48541063159577597,
+      "n_clusters_actual": 30
+    }
+  ],
+  "rf_metrics": [
+    {
+      "fold": 0,
+      "train_acc": 1.0,
+      "test_acc": 0.8888888888888888
+    },
+    {
+      "fold": 1,
+      "train_acc": 1.0,
+      "test_acc": 0.75
+    },
+    {
+      "fold": 2,
+      "train_acc": 1.0,
+      "test_acc": 0.625
+    },
+    {
+      "fold": 3,
+      "train_acc": 1.0,
+      "test_acc": 1.0
+    },
+    {
+      "fold": 4,
+      "train_acc": 1.0,
+      "test_acc": 0.625
+    }
+  ],
+  "dt_metrics": [
+    {
+      "fold": 0,
+      "train_acc": 1.0,
+      "test_acc": 1.0
+    },
+    {
+      "fold": 1,
+      "train_acc": 1.0,
+      "test_acc": 0.875
+    },
+    {
+      "fold": 2,
+      "train_acc": 1.0,
+      "test_acc": 0.75
+    },
+    {
+      "fold": 3,
+      "train_acc": 1.0,
+      "test_acc": 1.0
+    },
+    {
+      "fold": 4,
+      "train_acc": 1.0,
+      "test_acc": 0.75
+    }
+  ],
+  "lr_metrics": [
+    {
+      "fold": 0,
+      "train_acc": 1.0,
+      "test_acc": 1.0
+    },
+    {
+      "fold": 1,
+      "train_acc": 1.0,
+      "test_acc": 0.5
+    },
+    {
+      "fold": 2,
+      "train_acc": 1.0,
+      "test_acc": 0.875
+    },
+    {
+      "fold": 3,
+      "train_acc": 1.0,
+      "test_acc": 0.875
+    },
+    {
+      "fold": 4,
+      "train_acc": 1.0,
+      "test_acc": 0.5
+    }
+  ],
+  "baseline_metrics": [
+    {
+      "fold": 0,
+      "test_acc": 0.2222222222222222,
+      "majority_class": null
+    },
+    {
+      "fold": 1,
+      "test_acc": 0.375,
+      "majority_class": null
+    },
+    {
+      "fold": 2,
+      "test_acc": 0.375,
+      "majority_class": null
+    },
+    {
+      "fold": 3,
+      "test_acc": 0.375,
+      "majority_class": null
+    },
+    {
+      "fold": 4,
+      "test_acc": 0.25,
+      "majority_class": null
+    }
+  ],
+  "shap_shapes": [
+    {
+      "fold": 0,
+      "type": "array",
+      "shape": [
+        9,
+        30,
+        5
+      ]
+    },
+    {
+      "fold": 1,
+      "type": "array",
+      "shape": [
+        8,
+        30,
+        5
+      ]
+    },
+    {
+      "fold": 2,
+      "type": "array",
+      "shape": [
+        8,
+        30,
+        5
+      ]
+    },
+    {
+      "fold": 3,
+      "type": "array",
+      "shape": [
+        8,
+        30,
+        5
+      ]
+    },
+    {
+      "fold": 4,
+      "type": "array",
+      "shape": [
+        8,
+        30,
+        5
+      ]
+    }
+  ],
+  "decision_plot_tasks": [
+    {
+      "fold": 0,
+      "class_index": 0,
+      "class_label": "HPW",
+      "n_samples_class_in_fold_test": 2
+    },
+    {
+      "fold": 0,
+      "class_index": 1,
+      "class_label": "HSPW",
+      "n_samples_class_in_fold_test": 2
+    },
+    {
+      "fold": 0,
+      "class_index": 2,
+      "class_label": "LPW",
+      "n_samples_class_in_fold_test": 2
+    },
+    {
+      "fold": 0,
+      "class_index": 3,
+      "class_label": "LSWW",
+      "n_samples_class_in_fold_test": 2
+    },
+    {
+      "fold": 0,
+      "class_index": 4,
+      "class_label": "LWW",
+      "n_samples_class_in_fold_test": 1
+    },
+    {
+      "fold": 1,
+      "class_index": 0,
+      "class_label": "HPW",
+      "n_samples_class_in_fold_test": 2
+    },
+    {
+      "fold": 1,
+      "class_index": 1,
+      "class_label": "HSPW",
+      "n_samples_class_in_fold_test": 3
+    },
+    {
+      "fold": 1,
+      "class_index": 2,
+      "class_label": "LPW",
+      "n_samples_class_in_fold_test": 1
+    },
+    {
+      "fold": 1,
+      "class_index": 3,
+      "class_label": "LSWW",
+      "n_samples_class_in_fold_test": 1
+    },
+    {
+      "fold": 1,
+      "class_index": 4,
+      "class_label": "LWW",
+      "n_samples_class_in_fold_test": 1
+    },
+    {
+      "fold": 2,
+      "class_index": 0,
+      "class_label": "HPW",
+      "n_samples_class_in_fold_test": 2
+    },
+    {
+      "fold": 2,
+      "class_index": 1,
+      "class_label": "HSPW",
+      "n_samples_class_in_fold_test": 3
+    },
+    {
+      "fold": 2,
+      "class_index": 2,
+      "class_label": "LPW",
+      "n_samples_class_in_fold_test": 1
+    },
+    {
+      "fold": 2,
+      "class_index": 3,
+      "class_label": "LSWW",
+      "n_samples_class_in_fold_test": 1
+    },
+    {
+      "fold": 2,
+      "class_index": 4,
+      "class_label": "LWW",
+      "n_samples_class_in_fold_test": 1
+    },
+    {
+      "fold": 3,
+      "class_index": 0,
+      "class_label": "HPW",
+      "n_samples_class_in_fold_test": 2
+    },
+    {
+      "fold": 3,
+      "class_index": 1,
+      "class_label": "HSPW",
+      "n_samples_class_in_fold_test": 3
+    },
+    {
+      "fold": 3,
+      "class_index": 2,
+      "class_label": "LPW",
+      "n_samples_class_in_fold_test": 1
+    },
+    {
+      "fold": 3,
+      "class_index": 3,
+      "class_label": "LSWW",
+      "n_samples_class_in_fold_test": 1
+    },
+    {
+      "fold": 3,
+      "class_index": 4,
+      "class_label": "LWW",
+      "n_samples_class_in_fold_test": 1
+    },
+    {
+      "fold": 4,
+      "class_index": 0,
+      "class_label": "HPW",
+      "n_samples_class_in_fold_test": 1
+    },
+    {
+      "fold": 4,
+      "class_index": 1,
+      "class_label": "HSPW",
+      "n_samples_class_in_fold_test": 2
+    },
+    {
+      "fold": 4,
+      "class_index": 2,
+      "class_label": "LPW",
+      "n_samples_class_in_fold_test": 1
+    },
+    {
+      "fold": 4,
+      "class_index": 3,
+      "class_label": "LSWW",
+      "n_samples_class_in_fold_test": 2
+    },
+    {
+      "fold": 4,
+      "class_index": 4,
+      "class_label": "LWW",
+      "n_samples_class_in_fold_test": 2
+    }
+  ],
+  "force_plot_counts": [
+    {
+      "fold": 0,
+      "class_label": "HPW",
+      "tp_count": 2,
+      "fn_count": 0
+    },
+    {
+      "fold": 0,
+      "class_label": "HSPW",
+      "tp_count": 2,
+      "fn_count": 0
+    },
+    {
+      "fold": 0,
+      "class_label": "LPW",
+      "tp_count": 2,
+      "fn_count": 0
+    },
+    {
+      "fold": 0,
+      "class_label": "LSWW",
+      "tp_count": 2,
+      "fn_count": 0
+    },
+    {
+      "fold": 0,
+      "class_label": "LWW",
+      "tp_count": 1,
+      "fn_count": 0
+    },
+    {
+      "fold": 1,
+      "class_label": "HPW",
+      "tp_count": 2,
+      "fn_count": 0
+    },
+    {
+      "fold": 1,
+      "class_label": "HSPW",
+      "tp_count": 2,
+      "fn_count": 1
+    },
+    {
+      "fold": 1,
+      "class_label": "LPW",
+      "tp_count": 1,
+      "fn_count": 0
+    },
+    {
+      "fold": 1,
+      "class_label": "LSWW",
+      "tp_count": 1,
+      "fn_count": 0
+    },
+    {
+      "fold": 1,
+      "class_label": "LWW",
+      "tp_count": 1,
+      "fn_count": 0
+    },
+    {
+      "fold": 2,
+      "class_label": "HPW",
+      "tp_count": 1,
+      "fn_count": 1
+    },
+    {
+      "fold": 2,
+      "class_label": "HSPW",
+      "tp_count": 3,
+      "fn_count": 0
+    },
+    {
+      "fold": 2,
+      "class_label": "LPW",
+      "tp_count": 1,
+      "fn_count": 0
+    },
+    {
+      "fold": 2,
+      "class_label": "LSWW",
+      "tp_count": 0,
+      "fn_count": 1
+    },
+    {
+      "fold": 2,
+      "class_label": "LWW",
+      "tp_count": 1,
+      "fn_count": 0
+    },
+    {
+      "fold": 3,
+      "class_label": "HPW",
+      "tp_count": 2,
+      "fn_count": 0
+    },
+    {
+      "fold": 3,
+      "class_label": "HSPW",
+      "tp_count": 3,
+      "fn_count": 0
+    },
+    {
+      "fold": 3,
+      "class_label": "LPW",
+      "tp_count": 1,
+      "fn_count": 0
+    },
+    {
+      "fold": 3,
+      "class_label": "LSWW",
+      "tp_count": 1,
+      "fn_count": 0
+    },
+    {
+      "fold": 3,
+      "class_label": "LWW",
+      "tp_count": 1,
+      "fn_count": 0
+    },
+    {
+      "fold": 4,
+      "class_label": "HPW",
+      "tp_count": 1,
+      "fn_count": 0
+    },
+    {
+      "fold": 4,
+      "class_label": "HSPW",
+      "tp_count": 2,
+      "fn_count": 0
+    },
+    {
+      "fold": 4,
+      "class_label": "LPW",
+      "tp_count": 1,
+      "fn_count": 0
+    },
+    {
+      "fold": 4,
+      "class_label": "LSWW",
+      "tp_count": 1,
+      "fn_count": 1
+    },
+    {
+      "fold": 4,
+      "class_label": "LWW",
+      "tp_count": 1,
+      "fn_count": 1
+    }
+  ],
+  "aggregate": {
+    "rf_test_mean": 0.7777777777777778,
+    "dt_test_mean": 0.875,
+    "lr_test_mean": 0.75,
+    "baseline_test_mean": 0.3194444444444445
+  },
+  "best_model": {
+    "name": "dt",
+    "mean_test_accuracy": 0.875,
+    "metrics": {
+      "accuracy": 0.8780487804878049,
+      "precision_macro": 0.8587301587301587,
+      "precision_weighted": 0.8844367015098722,
+      "recall_macro": 0.8719169719169718,
+      "recall_weighted": 0.8780487804878049,
+      "f1_macro": 0.86208547008547,
+      "f1_weighted": 0.878499061913696,
+      "roc_auc_ovr_macro": 0.9213208809164692,
+      "roc_auc_ovr_weighted": 0.926811974789916,
+      "roc_auc_micro": 0.923780487804878
+    }
+  },
+  "best_model_metrics": {
+    "accuracy": 0.8780487804878049,
+    "precision_macro": 0.8587301587301587,
+    "precision_weighted": 0.8844367015098722,
+    "recall_macro": 0.8719169719169718,
+    "recall_weighted": 0.8780487804878049,
+    "f1_macro": 0.86208547008547,
+    "f1_weighted": 0.878499061913696,
+    "roc_auc_ovr_macro": 0.9213208809164692,
+    "roc_auc_ovr_weighted": 0.926811974789916,
+    "roc_auc_micro": 0.923780487804878
+  },
+  "artifacts": {
+    "correlation_panel": "results/reproducible_run/figures/correlation_matrices_before_reduction.png",
+    "correlation_paths": [
+      "results/reproducible_run/figures/correlation_matrices_by_fold/fold_0_correlation_matrix.png",
+      "results/reproducible_run/figures/correlation_matrices_by_fold/fold_1_correlation_matrix.png",
+      "results/reproducible_run/figures/correlation_matrices_by_fold/fold_2_correlation_matrix.png",
+      "results/reproducible_run/figures/correlation_matrices_by_fold/fold_3_correlation_matrix.png",
+      "results/reproducible_run/figures/correlation_matrices_by_fold/fold_4_correlation_matrix.png"
+    ],
+    "dendrogram_panel": "results/reproducible_run/figures/dendrograms_before_reduction.png",
+    "dendrogram_paths": [
+      "results/reproducible_run/figures/dendrograms_by_fold/fold_0_dendrogram.png",
+      "results/reproducible_run/figures/dendrograms_by_fold/fold_1_dendrogram.png",
+      "results/reproducible_run/figures/dendrograms_by_fold/fold_2_dendrogram.png",
+      "results/reproducible_run/figures/dendrograms_by_fold/fold_3_dendrogram.png",
+      "results/reproducible_run/figures/dendrograms_by_fold/fold_4_dendrogram.png"
+    ],
+    "decision_plot_paths": [
+      "results/reproducible_run/figures/decision_plots_by_class/class_HPW/fold_0_class_HPW.png",
+      "results/reproducible_run/figures/decision_plots_by_class/class_HSPW/fold_0_class_HSPW.png",
+      "results/reproducible_run/figures/decision_plots_by_class/class_LPW/fold_0_class_LPW.png",
+      "results/reproducible_run/figures/decision_plots_by_class/class_LSWW/fold_0_class_LSWW.png",
+      "results/reproducible_run/figures/decision_plots_by_class/class_LWW/fold_0_class_LWW.png",
+      "results/reproducible_run/figures/decision_plots_by_class/class_HPW/fold_1_class_HPW.png",
+      "results/reproducible_run/figures/decision_plots_by_class/class_HSPW/fold_1_class_HSPW.png",
+      "results/reproducible_run/figures/decision_plots_by_class/class_LPW/fold_1_class_LPW.png",
+      "results/reproducible_run/figures/decision_plots_by_class/class_LSWW/fold_1_class_LSWW.png",
+      "results/reproducible_run/figures/decision_plots_by_class/class_LWW/fold_1_class_LWW.png",
+      "results/reproducible_run/figures/decision_plots_by_class/class_HPW/fold_2_class_HPW.png",
+      "results/reproducible_run/figures/decision_plots_by_class/class_HSPW/fold_2_class_HSPW.png",
+      "results/reproducible_run/figures/decision_plots_by_class/class_LPW/fold_2_class_LPW.png",
+      "results/reproducible_run/figures/decision_plots_by_class/class_LSWW/fold_2_class_LSWW.png",
+      "results/reproducible_run/figures/decision_plots_by_class/class_LWW/fold_2_class_LWW.png",
+      "results/reproducible_run/figures/decision_plots_by_class/class_HPW/fold_3_class_HPW.png",
+      "results/reproducible_run/figures/decision_plots_by_class/class_HSPW/fold_3_class_HSPW.png",
+      "results/reproducible_run/figures/decision_plots_by_class/class_LPW/fold_3_class_LPW.png",
+      "results/reproducible_run/figures/decision_plots_by_class/class_LSWW/fold_3_class_LSWW.png",
+      "results/reproducible_run/figures/decision_plots_by_class/class_LWW/fold_3_class_LWW.png",
+      "results/reproducible_run/figures/decision_plots_by_class/class_HPW/fold_4_class_HPW.png",
+      "results/reproducible_run/figures/decision_plots_by_class/class_HSPW/fold_4_class_HSPW.png",
+      "results/reproducible_run/figures/decision_plots_by_class/class_LPW/fold_4_class_LPW.png",
+      "results/reproducible_run/figures/decision_plots_by_class/class_LSWW/fold_4_class_LSWW.png",
+      "results/reproducible_run/figures/decision_plots_by_class/class_LWW/fold_4_class_LWW.png"
+    ],
+    "force_tp_paths": [
+      "results/reproducible_run/figures/force_plots_tp/fold_0_class_HPW_TP_0.png",
+      "results/reproducible_run/figures/force_plots_tp/fold_0_class_HPW_TP_1.png",
+      "results/reproducible_run/figures/force_plots_tp/fold_0_class_HSPW_TP_5.png",
+      "results/reproducible_run/figures/force_plots_tp/fold_0_class_HSPW_TP_6.png",
+      "results/reproducible_run/figures/force_plots_tp/fold_0_class_LPW_TP_3.png",
+      "results/reproducible_run/figures/force_plots_tp/fold_0_class_LPW_TP_4.png",
+      "results/reproducible_run/figures/force_plots_tp/fold_0_class_LSWW_TP_7.png",
+      "results/reproducible_run/figures/force_plots_tp/fold_0_class_LSWW_TP_8.png",
+      "results/reproducible_run/figures/force_plots_tp/fold_0_class_LWW_TP_2.png",
+      "results/reproducible_run/figures/force_plots_tp/fold_1_class_HPW_TP_0.png",
+      "results/reproducible_run/figures/force_plots_tp/fold_1_class_HPW_TP_1.png",
+      "results/reproducible_run/figures/force_plots_tp/fold_1_class_HSPW_TP_5.png",
+      "results/reproducible_run/figures/force_plots_tp/fold_1_class_HSPW_TP_6.png",
+      "results/reproducible_run/figures/force_plots_tp/fold_1_class_LPW_TP_3.png",
+      "results/reproducible_run/figures/force_plots_tp/fold_1_class_LSWW_TP_7.png",
+      "results/reproducible_run/figures/force_plots_tp/fold_1_class_LWW_TP_2.png",
+      "results/reproducible_run/figures/force_plots_tp/fold_2_class_HPW_TP_1.png",
+      "results/reproducible_run/figures/force_plots_tp/fold_2_class_HSPW_TP_4.png",
+      "results/reproducible_run/figures/force_plots_tp/fold_2_class_HSPW_TP_5.png",
+      "results/reproducible_run/figures/force_plots_tp/fold_2_class_HSPW_TP_6.png",
+      "results/reproducible_run/figures/force_plots_tp/fold_2_class_LPW_TP_3.png",
+      "results/reproducible_run/figures/force_plots_tp/fold_2_class_LWW_TP_2.png",
+      "results/reproducible_run/figures/force_plots_tp/fold_3_class_HPW_TP_0.png",
+      "results/reproducible_run/figures/force_plots_tp/fold_3_class_HPW_TP_1.png",
+      "results/reproducible_run/figures/force_plots_tp/fold_3_class_HSPW_TP_4.png",
+      "results/reproducible_run/figures/force_plots_tp/fold_3_class_HSPW_TP_5.png",
+      "results/reproducible_run/figures/force_plots_tp/fold_3_class_HSPW_TP_6.png",
+      "results/reproducible_run/figures/force_plots_tp/fold_3_class_LPW_TP_3.png",
+      "results/reproducible_run/figures/force_plots_tp/fold_3_class_LSWW_TP_7.png",
+      "results/reproducible_run/figures/force_plots_tp/fold_3_class_LWW_TP_2.png",
+      "results/reproducible_run/figures/force_plots_tp/fold_4_class_HPW_TP_0.png",
+      "results/reproducible_run/figures/force_plots_tp/fold_4_class_HSPW_TP_4.png",
+      "results/reproducible_run/figures/force_plots_tp/fold_4_class_HSPW_TP_5.png",
+      "results/reproducible_run/figures/force_plots_tp/fold_4_class_LPW_TP_3.png",
+      "results/reproducible_run/figures/force_plots_tp/fold_4_class_LSWW_TP_7.png",
+      "results/reproducible_run/figures/force_plots_tp/fold_4_class_LWW_TP_2.png"
+    ],
+    "force_rounded_paths": [
+      "results/reproducible_run/figures/force_plots_rounded/fold_0_class_HPW_TP_0.png",
+      "results/reproducible_run/figures/force_plots_rounded/fold_0_class_HPW_TP_1.png",
+      "results/reproducible_run/figures/force_plots_rounded/fold_0_class_HSPW_TP_5.png",
+      "results/reproducible_run/figures/force_plots_rounded/fold_0_class_HSPW_TP_6.png",
+      "results/reproducible_run/figures/force_plots_rounded/fold_0_class_LPW_TP_3.png",
+      "results/reproducible_run/figures/force_plots_rounded/fold_0_class_LPW_TP_4.png",
+      "results/reproducible_run/figures/force_plots_rounded/fold_0_class_LSWW_TP_7.png",
+      "results/reproducible_run/figures/force_plots_rounded/fold_0_class_LSWW_TP_8.png",
+      "results/reproducible_run/figures/force_plots_rounded/fold_0_class_LWW_TP_2.png",
+      "results/reproducible_run/figures/force_plots_rounded/fold_1_class_HPW_TP_0.png",
+      "results/reproducible_run/figures/force_plots_rounded/fold_1_class_HPW_TP_1.png",
+      "results/reproducible_run/figures/force_plots_rounded/fold_1_class_HSPW_TP_5.png",
+      "results/reproducible_run/figures/force_plots_rounded/fold_1_class_HSPW_TP_6.png",
+      "results/reproducible_run/figures/force_plots_rounded/fold_1_class_HSPW_FN_4.png",
+      "results/reproducible_run/figures/force_plots_rounded/fold_1_class_LPW_TP_3.png",
+      "results/reproducible_run/figures/force_plots_rounded/fold_1_class_LSWW_TP_7.png",
+      "results/reproducible_run/figures/force_plots_rounded/fold_1_class_LWW_TP_2.png",
+      "results/reproducible_run/figures/force_plots_rounded/fold_2_class_HPW_TP_1.png",
+      "results/reproducible_run/figures/force_plots_rounded/fold_2_class_HPW_FN_0.png",
+      "results/reproducible_run/figures/force_plots_rounded/fold_2_class_HSPW_TP_4.png",
+      "results/reproducible_run/figures/force_plots_rounded/fold_2_class_HSPW_TP_5.png",
+      "results/reproducible_run/figures/force_plots_rounded/fold_2_class_HSPW_TP_6.png",
+      "results/reproducible_run/figures/force_plots_rounded/fold_2_class_LPW_TP_3.png",
+      "results/reproducible_run/figures/force_plots_rounded/fold_2_class_LSWW_FN_7.png",
+      "results/reproducible_run/figures/force_plots_rounded/fold_2_class_LWW_TP_2.png",
+      "results/reproducible_run/figures/force_plots_rounded/fold_3_class_HPW_TP_0.png",
+      "results/reproducible_run/figures/force_plots_rounded/fold_3_class_HPW_TP_1.png",
+      "results/reproducible_run/figures/force_plots_rounded/fold_3_class_HSPW_TP_4.png",
+      "results/reproducible_run/figures/force_plots_rounded/fold_3_class_HSPW_TP_5.png",
+      "results/reproducible_run/figures/force_plots_rounded/fold_3_class_HSPW_TP_6.png",
+      "results/reproducible_run/figures/force_plots_rounded/fold_3_class_LPW_TP_3.png",
+      "results/reproducible_run/figures/force_plots_rounded/fold_3_class_LSWW_TP_7.png",
+      "results/reproducible_run/figures/force_plots_rounded/fold_3_class_LWW_TP_2.png",
+      "results/reproducible_run/figures/force_plots_rounded/fold_4_class_HPW_TP_0.png",
+      "results/reproducible_run/figures/force_plots_rounded/fold_4_class_HSPW_TP_4.png",
+      "results/reproducible_run/figures/force_plots_rounded/fold_4_class_HSPW_TP_5.png",
+      "results/reproducible_run/figures/force_plots_rounded/fold_4_class_LPW_TP_3.png",
+      "results/reproducible_run/figures/force_plots_rounded/fold_4_class_LSWW_TP_7.png",
+      "results/reproducible_run/figures/force_plots_rounded/fold_4_class_LSWW_FN_6.png",
+      "results/reproducible_run/figures/force_plots_rounded/fold_4_class_LWW_TP_2.png",
+      "results/reproducible_run/figures/force_plots_rounded/fold_4_class_LWW_FN_1.png"
+    ],
+    "tree_path": "results/reproducible_run/figures/decision_tree_final_fold.png",
+    "confusion_matrix_path": "results/reproducible_run/figures/confusion_matrix_dt.png",
+    "roc_curve_path": "results/reproducible_run/figures/roc_curves_dt.png",
+    "rounded_force_failure": null
+  },
+  "dataset_path": "../TomatoPredictor/Vsi_podatki_brez_null.xlsx",
+  "n_samples": 41,
+  "n_features_raw": 70,
+  "mean_test_accuracy": {
+    "rf": 0.7777777777777778,
+    "dt": 0.875,
+    "lr": 0.75,
+    "baseline": 0.3194444444444445
+  },
+  "best_model_name": "dt",
+  "correlation_plot_count": 5,
+  "dendrogram_plot_count": 5,
+  "decision_plot_count": 25,
+  "force_tp_plot_count": 36,
+  "force_rounded_plot_count": 41,
+  "confusion_matrix_plot_count": 1,
+  "roc_curve_plot_count": 1,
+  "rounded_force_failure": null
+}
