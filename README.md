@@ -23,9 +23,9 @@ This repository provides a reproducible machine-learning workflow for classifyin
 ![ROC curves](assets/roc_curves_lr.png)
 
 Quantitative reproducible run summary (5-fold CV over repository default dataset):
-- Logistic Regression mean test accuracy: **0.7528**
-- Random Forest mean test accuracy: **0.7083**
-- Decision Tree mean test accuracy: **0.6083**
+- Logistic Regression mean test accuracy: **0.7500**
+- Random Forest mean test accuracy: **0.7778**
+- Decision Tree mean test accuracy: **0.8750**
 - Dummy baseline mean test accuracy: **0.3194**
 
 ## Repository Structure
